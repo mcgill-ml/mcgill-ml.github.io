@@ -1,0 +1,204 @@
+[
+	{
+		"title": "LLM Steering",
+		"date": "2026-01-21",
+		"paper": "https://arxiv.org/abs/2503.00177",
+		"type": "Reading Group Discussion"
+	},
+	{
+		"title": "Human-Level Play in Diplomacy",
+		"date": "2026-01-28",
+		"type": "ML Paper Presentation"
+	},
+	{
+		"title": "Titans: Memorization at Test-Time",
+		"date": "2026-02-04",
+		"type": "ML Paper Presentation"
+	},
+	{
+		"title": "RT-2: Enhancing Robotics Using Video Input",
+		"date": "2026-02-18",
+		"type": "ML Paper Presentation"
+	},
+	{
+		"title": "Progress Measures for Grokking via Mechanistic Interpretability",
+		"date": "2026-02-25",
+		"type": "Reading Group Discussion"
+	},
+	{
+		"title": "Refusal in LLMs: Mediated by a Single Direction",
+		"date": "2026-03-11",
+		"type": "ML Presentation"
+	},
+	{
+		"title": "FaceNet",
+		"date": "2026-03-18",
+		"type": "ML Presentation"
+	},
+	{
+		"title": "Deployment of AI Systems in Startups",
+		"presenter": "Eduard Anton",
+		"date": "2026-03-25",
+		"type": "Startup Co-Founder Seminar"
+	},
+	{
+		"title": "OpenAI's Hugging Face Incident",
+		"date": "2026-09-08",
+		"type": "ML Presentation"
+	},
+	{
+		"title": "Self-Play in RL",
+		"date": "2026-09-22",
+		"type": "ML Presentation"
+	},
+	{
+		"title": "Navier-Stokes & Its Implications",
+		"date": "2026-09-29",
+		"type": "Presentation + Open Debate Session"
+	},
+	{
+		"title": "Open vs. Closed-Source AI",
+		"date": "2026-10-06",
+		"type": "Presentation + Open Debate Session"
+	},
+	{
+		"title": "PHP Zero-Day Exploits and AI-Powered Hacking",
+		"date": "2026-10-27",
+		"type": "Presentation + Open Debate Session"
+	},
+	{
+		"title": "AI Robotics: Frontiers and Open Problems",
+		"date": "2026-11-03",
+		"type": "ML Presentation"
+	},
+	{
+		"title": "Generalist Robot Policy: Octo",
+		"date": "2026-11-10",
+		"type": "ML Paper Presentation"
+	},
+	{
+		"title": "World Models",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-11-17"
+	},
+	{
+		"title": "Tiny Recursive Model",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-11-10"
+	},
+	{
+		"title": "Workshop on LLM Alignment",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-11-03"
+	},
+	{
+		"title": "Z1: Efficient Test-time Scaling with Code",
+		"presenter": "Laurence Liang",
+		"affiliation": "McGill University",
+		"date": "2025-10-27"
+	},
+	{
+		"title": "Diffusion and Flow Matching",
+		"presenter": "Mark Chiu",
+		"affiliation": "University of Waterloo",
+		"date": "2025-10-20",
+		"guestPresenter": true
+	},
+	{
+		"title": "Affective Social Robots, Emotions and Gamification",
+		"presenter": "Professor Hatice Kose",
+		"affiliation": "Istanbul Technical University",
+		"date": "2025-10-06",
+		"guestPresenter": true
+	},
+	{
+		"title": "Simultaneous Localization and Mapping (SLAM)",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-09-28"
+	},
+	{
+		"title": "SciGym: Measuring Scientific Capabilities of Language Models with a Systems Biology Dry Lab",
+		"presenter": "Stephen Lu",
+		"affiliation": "UC Berkeley",
+		"date": "2025-09-24",
+		"guestPresenter": true
+	},
+	{
+		"title": "A Neuromotor Interface for Human Computer Interatction",
+		"presenter": "Antonio", 
+		"affiliation": "McGill University",
+		"date": "2025-09-22"
+	},
+	{
+		"title": "Transformers",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-09-15"
+	},
+	{
+		"title": "Large Language Diffusion Models",
+		"presenter": "Laurence Liang",
+		"affiliation": "McGill University",
+		"date": "2025-04-10"
+	},
+	{
+		"title": "CNNs to Analyze Chest X-Rays",
+		"presenter": "Antonio",
+		"affiliation": "McGill University",
+		"date": "2025-03-18"
+	},
+	{
+		"title": "Healthcare and RAG",
+		"presenter": "Dani & Victor",
+		"affiliation": "Université de Montréal & McGill University",
+		"date": "2025-03-11"
+	},
+	{
+		"title": "MedRAX: Medical Reasoning Agent for Chest X-Ray",
+		"presenter": "Adibvafa Fallahpour",
+		"affiliation": "University of Toronto",
+		"date": "2025-02-25",
+		"guestPresenter": true
+	},
+	{
+		"title": "Codon Transformer",
+		"presenter": "Adibvafa Fallahpour",
+		"affiliation": "University of Toronto",
+		"date": "2025-02-25",
+		"guestPresenter": true
+	},
+	{
+		"title": "Backpropagation",
+		"presenter": "Dani",
+		"affiliation": "Université de Montréal",
+		"date": "2025-02-18"
+	},
+	{
+		"title": "Convolutional Networks for Images, Speech and Time-Series (1997)",
+		"presenter": "Dani & Victor",
+		"affiliation": "Université de Montréal & McGill University",
+		"date": "2025-02-11"
+	},
+	{
+		"title": "Grover's Search Algorithm",
+		"presenter": "Vincent Candela",
+		"affiliation": "McGill University",
+		"date": "2025-02-04"
+	},
+	{
+		"title": "DeepSeek R1",
+		"presenter": "Vincent Candela",
+		"affiliation": "McGill University",
+		"date": "2025-01-28"
+	},
+	{
+		"title": "Titans: Learning to Memorize at Test-Time",
+		"presenter": "Vincent Candela",
+		"affiliation": "McGill University",
+		"date": "2025-01-21"
+	}
+]
