@@ -3,8 +3,17 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'McGill Machine Learning Reading Group',
-  description: 'A reading group for machine learning at McGill University.',
+  title: 'McGill Machine Learning Group',
+  description: 'A student group studying ML advancements and working on ML projects.',
+  openGraph: {
+    title: 'McGill Machine Learning Group',
+    description: 'A student group studying ML advancements and working on ML projects.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'McGill Machine Learning Group',
+    description: 'A student group studying ML advancements and working on ML projects.',
+  },
 }
 
 export default function RootLayout({
