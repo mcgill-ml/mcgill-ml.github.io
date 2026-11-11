@@ -32,30 +32,30 @@ function Presentations() {
 
     // Render grouped presentations
     const presentationList = Object.keys(groupedPresentations).map((season) => (
-        <div key={season} className="mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">{season}</h3>
-            <div className="flex flex-col space-y-4">
+        <div key={season} className="mb-10">
+            <h3 className="mb-4 text-xl font-bold text-white sm:text-2xl">{season}</h3>
+            <div className="flex flex-col space-y-3">
                 {groupedPresentations[season].map((pres, index) => (
-                    <div key={index} className="border-l-4 border-purple-500 pl-4 py-2">
+                    <div key={index} className="rounded-r-xl border-y border-r border-white/[0.06] border-l-2 border-l-[#7f1d1d] bg-white/[0.025] px-4 py-4 transition-colors hover:bg-white/[0.045]">
                         <PresentationInfoPopover
                             title={pres.title}
                             description={getPresentationDescription(pres)}
-                            titleClassName="mb-1 text-2xl font-bold text-purple-500 focus-visible:outline-purple-500"
+                            titleClassName="mb-2 text-xl font-semibold leading-snug text-[#f2a3a3] transition-colors hover:text-[#ffc0c0] focus-visible:outline-[#f2a3a3] sm:text-2xl"
                         />
                         {pres.type ? (
-                            <span className="bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
+                            <span className="mb-2 inline-block rounded border border-[#5f242a] bg-[#2a1114] px-2 py-1 text-xs font-semibold text-[#eab0b0]">
                                 {pres.type}
                             </span>
                         ) : pres.guestPresenter ? (
-                            <span className="bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
+                            <span className="mb-2 inline-block rounded border border-[#5f242a] bg-[#2a1114] px-2 py-1 text-xs font-semibold text-[#eab0b0]">
                                 Guest Presenter
                             </span>
                         ) : (
-                            <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
+                            <span className="mb-2 inline-block rounded border border-white/10 bg-white/[0.06] px-2 py-1 text-xs font-semibold text-slate-300">
                                 Reading Group Discussion
                             </span>
                         )}
-                        {pres.presenter && <p className="text-white text-lg font-semibold">{pres.presenter}</p>}
+                        {pres.presenter && <p className="text-base font-semibold text-white/90">{pres.presenter}</p>}
                         {pres.affiliation && <p className="text-slate-600 text-sm">{pres.affiliation}</p>}
                         <p className="text-slate-500 text-sm mt-1">{pres.date}</p>
                         {pres.paper && (
@@ -63,7 +63,7 @@ function Presentations() {
                                 href={pres.paper}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-purple-500 hover:text-purple-700 text-sm mt-1 inline-block hover:underline"
+                                className="mt-1 inline-block text-sm text-[#f2a3a3] hover:text-[#ffc0c0] hover:underline"
                             >
                                 📄 View Paper
                             </a>
@@ -93,8 +93,9 @@ function Presentations() {
         </div>
 
         <div className='flex flex-col items-center w-full mt-10 pb-14'>
-            <div className='flex flex-col items-left justify-left w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2'>
-                <p className='text-3xl mb-5 text-white'>Presentations</p>
+            <div className='flex w-[86%] flex-col items-left justify-left sm:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/2'>
+                <p className='text-3xl mb-1 text-white'>Presentations</p>
+                <p className="mb-5 text-sm text-slate-500">Click on any title to view info.</p>
 
                 <div className="flex flex-col">
                 {presentationList}

@@ -24,7 +24,7 @@ export default function Home() {
       <PresentationInfoPopover
         title={pres.title}
         description={getPresentationDescription(pres)}
-        titleClassName="mb-1 text-lg font-semibold text-purple-500 focus-visible:outline-purple-400"
+        titleClassName="mb-1 text-lg font-semibold text-[#ff3737] focus-visible:outline-[#ff3737]"
       />
       {pres.presenter && <p className="text-white/80 text-sm">{pres.presenter}</p>}
       {pres.affiliation && <p className="text-white/60 text-xs">{pres.affiliation}</p>}
@@ -73,7 +73,7 @@ export default function Home() {
 
           <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
             <h1
-              className="w-full pr-16 text-left text-3xl font-bold leading-tight text-[#FFBCBC] sm:px-10 sm:pr-10 sm:text-center sm:text-4xl md:text-5xl"
+              className="w-full px-2 text-center text-3xl font-bold leading-tight text-[#ff9f9f] sm:px-10 sm:text-4xl md:text-5xl"
               style={{fontFamily: 'Georgia, "Times New Roman", serif'}}
             >
               McGill Machine Learning Group
@@ -139,10 +139,11 @@ export default function Home() {
       <div className="bg-black px-4 py-4 sm:px-6 sm:py-5">
         <Link
           href="/review"
-          className="flex aspect-[4/1] w-full items-center justify-center rounded-3xl bg-[linear-gradient(110deg,#7f1d1d_0%,#b91c1c_91%,#fff7f7_100%)] px-6 text-center text-2xl font-semibold text-white shadow-xl shadow-red-950/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white sm:text-4xl lg:text-5xl"
+          className="relative flex aspect-[4/1] w-full items-center justify-center overflow-hidden rounded-3xl bg-[linear-gradient(115deg,#ff3737_0%,#d21f2b_48%,#8b0015_100%)] px-6 text-center text-2xl font-semibold text-white shadow-xl shadow-red-950/30 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white sm:text-4xl lg:text-5xl"
           style={{fontFamily: 'Georgia, "Times New Roman", serif'}}
         >
-          McGill Machine Learning Review
+          <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.12),transparent_46%,rgba(0,0,0,0.06))]" />
+          <span className="relative z-10">McGill Machine Learning Review</span>
         </Link>
       </div>
 
@@ -151,7 +152,7 @@ export default function Home() {
         <div className='homepage-serif flex w-3/4 flex-col items-start justify-start lg:w-1/2 xl:w-1/2 2xl:w-1/2'>
 
         <div className='mt-10 mb-5'>
-          <h2 className="mb-4 flex text-3xl font-bold text-[#ffe0e0]" style={{fontFamily: 'Georgia, "Times New Roman", serif'}}>
+          <h2 className="mb-4 flex text-3xl font-bold text-[#ff9f9f]" style={{fontFamily: 'Georgia, "Times New Roman", serif'}}>
             About
           </h2> 
           <p className="text-lg text-white">
@@ -169,9 +170,12 @@ export default function Home() {
 
           <div className='flex flex-col md:flex-row md:items-start md:justify-between mb-4'>
 
-          <h2 className="mb-2 flex text-3xl font-bold text-white md:mb-0">
-            Recent Presentations
-          </h2>
+          <div>
+            <h2 className="mb-1 flex text-3xl font-bold text-[#ff9f9f]">
+              Recent Presentations
+            </h2>
+            <p className="mb-2 text-sm text-white/60 md:mb-0">Click on any title to view info.</p>
+          </div>
 
           <Link href="/presentations">
             <div className="flex items-center text-lg text-white underline">
@@ -188,7 +192,7 @@ export default function Home() {
           </div>
 
           <div className='mt-10 mb-5'>
-            <h2 className="mb-4 flex text-3xl font-bold text-white">
+            <h2 className="mb-4 flex text-3xl font-bold text-[#ff9f9f]">
               Executive Team
             </h2>
             <div className="grid grid-cols-1 gap-x-10 gap-y-4 text-white sm:grid-cols-2">
@@ -206,7 +210,7 @@ export default function Home() {
 
           <div className='flex flex-col md:flex-row md:items-start md:justify-between mb-4'>
 
-          <h2 className="mb-2 flex text-3xl font-bold text-white md:mb-0">
+          <h2 className="mb-2 flex text-3xl font-bold text-[#ff9f9f] md:mb-0">
             Latest Posts
           </h2>
 
@@ -226,7 +230,7 @@ export default function Home() {
           </div>
 
           <div className='mt-10 mb-5 pb-14'>
-          <h2 className="mb-4 flex text-3xl font-bold text-white">
+          <h2 className="mb-4 flex text-3xl font-bold text-[#ff9f9f]">
             Contact
           </h2> 
             <p className="text-lg text-white">
