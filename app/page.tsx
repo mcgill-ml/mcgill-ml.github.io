@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import { HiOutlineInformationCircle } from "react-icons/hi";
-import { RiDiscordFill, RiInstagramLine, RiLinkedinFill, RiBookOpenLine, RiMailLine, RiTeamLine, RiPresentationLine } from "react-icons/ri";
+import { RiDiscordFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import getPostMetadata from "../components/getPostMetadata"
 import getPresentations from "../components/getPresentations"
+import PresentationInfoPopover from "../components/PresentationInfoPopover";
+import { getPresentationDescription } from "../components/presentationDescriptions";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -20,7 +21,11 @@ export default function Home() {
   const presentations = getPresentations();
   const presentationPreviews = presentations.slice(0, 6).map((pres, index) => (
     <div key={index}>
-      <p className="text-purple-500 text-lg mb-1 font-semibold">{pres.title}</p>
+      <PresentationInfoPopover
+        title={pres.title}
+        description={getPresentationDescription(pres)}
+        titleClassName="mb-1 text-lg font-semibold text-purple-500 focus-visible:outline-purple-400"
+      />
       {pres.presenter && <p className="text-white/80 text-sm">{pres.presenter}</p>}
       {pres.affiliation && <p className="text-white/60 text-xs">{pres.affiliation}</p>}
       <p className="text-white/50 text-xs mt-1">{pres.date}</p>
@@ -33,7 +38,7 @@ export default function Home() {
       <div className="relative flex w-full flex-col overflow-hidden bg-black px-4 pb-6 pt-20 text-center sm:px-6 sm:pb-8 md:pt-20">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top,rgba(185,28,28,0.14),transparent_62%)]" />
 
-          <nav className="absolute right-4 top-4 z-20 flex flex-col items-center gap-2 sm:right-6 sm:top-5" aria-label="Social links">
+          <nav className="absolute right-4 top-4 z-20 flex flex-row items-center gap-2 sm:right-6 sm:top-5" aria-label="Social links">
             <Link
               href="https://discord.gg/bUQKQZCkDQ"
               rel="noopener noreferrer"
@@ -147,16 +152,15 @@ export default function Home() {
 
         <div className='mt-10 mb-5'>
           <h2 className="mb-4 flex text-3xl font-bold text-[#ffe0e0]" style={{fontFamily: 'Georgia, "Times New Roman", serif'}}>
-            <HiOutlineInformationCircle className="mr-2 text-green-500"/>
             About
           </h2> 
           <p className="text-lg text-white">
             We are the McGill Machine Learning Group, a student-led university organization. Our mandate is investigating cutting-edge advancements in ML research, and experimenting with them in projects.
           </p>
-          <p className="mt-2 text-lg text-white">
+          <p className="mt-6 text-lg text-white">
             We hold weekly student-led sessions discussing ML advancements. A few times a year, we directly invite professors, researchers, and ML startup founders, to hold public seminars for the student community through us.
           </p>
-          <p className="mt-2 text-lg text-white">
+          <p className="mt-6 text-lg text-white">
             We build ML physical projects, such as our automated robot arm, where we implement and fine-tune various policies to achieve generalization.
           </p>
         </div>
@@ -166,7 +170,6 @@ export default function Home() {
           <div className='flex flex-col md:flex-row md:items-start md:justify-between mb-4'>
 
           <h2 className="mb-2 flex text-3xl font-bold text-white md:mb-0">
-            <RiPresentationLine className="mr-2 text-purple-500"/>
             Recent Presentations
           </h2>
 
@@ -186,17 +189,16 @@ export default function Home() {
 
           <div className='mt-10 mb-5'>
             <h2 className="mb-4 flex text-3xl font-bold text-white">
-              <RiTeamLine className="mr-2 text-violet-500"/>
               Executive Team
             </h2>
             <div className="grid grid-cols-1 gap-x-10 gap-y-4 text-white sm:grid-cols-2">
-              <div><p className="text-lg font-semibold">Dani K.</p><p className="text-sm text-[#ffe0e0]/75">President</p></div>
-              <div><p className="text-lg font-semibold">Tony N.</p><p className="text-sm text-[#ffe0e0]/75">Vice-President</p></div>
-              <div><p className="text-lg font-semibold">Arthur F.</p><p className="text-sm text-[#ffe0e0]/75">VP External</p></div>
-              <div><p className="text-lg font-semibold">Béatrice R.</p><p className="text-sm text-[#ffe0e0]/75">VP External</p></div>
-              <div><p className="text-lg font-semibold">Denis K.</p><p className="text-sm text-[#ffe0e0]/75">Social Media Coordinator</p></div>
-              <div><p className="text-lg font-semibold">Aymen B.</p><p className="text-sm text-[#ffe0e0]/75">Presenter</p></div>
-              <div><p className="text-lg font-semibold">Georges H.</p><p className="text-sm text-[#ffe0e0]/75">Presenter</p></div>
+              <div><p className="text-lg font-semibold">Dani Kalaaji</p><p className="text-sm text-[#ffe0e0]/75">President</p></div>
+              <div><p className="text-lg font-semibold">Le Tuan Huy (Tony) Nguyen</p><p className="text-sm text-[#ffe0e0]/75">Vice-President</p></div>
+              <div><p className="text-lg font-semibold">Arthur Feld</p><p className="text-sm text-[#ffe0e0]/75">VP External</p></div>
+              <div><p className="text-lg font-semibold">Béatrice Richer</p><p className="text-sm text-[#ffe0e0]/75">VP External</p></div>
+              <div><p className="text-lg font-semibold">Denis Kul</p><p className="text-sm text-[#ffe0e0]/75">Social Media Coordinator</p></div>
+              <div><p className="text-lg font-semibold">Aymen Boustani</p><p className="text-sm text-[#ffe0e0]/75">Presenter</p></div>
+              <div><p className="text-lg font-semibold">Georges Hawi</p><p className="text-sm text-[#ffe0e0]/75">Presenter</p></div>
             </div>
           </div>
 
@@ -205,7 +207,6 @@ export default function Home() {
           <div className='flex flex-col md:flex-row md:items-start md:justify-between mb-4'>
 
           <h2 className="mb-2 flex text-3xl font-bold text-white md:mb-0">
-            <RiBookOpenLine className="mr-2 text-blue-500"/>
             Latest Posts
           </h2>
 
@@ -226,7 +227,6 @@ export default function Home() {
 
           <div className='mt-10 mb-5 pb-14'>
           <h2 className="mb-4 flex text-3xl font-bold text-white">
-            <RiMailLine className="mr-2 text-orange-500"/>
             Contact
           </h2> 
             <p className="text-lg text-white">
